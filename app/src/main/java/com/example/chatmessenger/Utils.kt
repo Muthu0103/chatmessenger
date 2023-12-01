@@ -52,67 +52,11 @@ class Utils {
         }
 
         fun getTime(): String {
-
-
-            val formatter = SimpleDateFormat("HH:mm:ss")
-            val date: Date = Date(System.currentTimeMillis())
-            val stringdate = formatter.format(date)
-
-
-            return stringdate
-
+            val formatter = SimpleDateFormat("hh:mm:ss")
+            return formatter.format(Date(System.currentTimeMillis()))
         }
 
-        // not using
 
-//        fun getToken() : String{
-//
-//            var returntoken = ""
-//
-//            val mysharedPrefs = SharedPrefs(context)
-//
-//            val friendid = mysharedPrefs.getValue("friendid")
-//
-//
-//            firestore.collection("Tokens").document(friendid!!).get().addOnSuccessListener {document->
-//
-//
-//                if (document.exists() && document!=null){
-//
-//
-//                    returntoken = document.toObject(Token::class.java).toString()
-//
-//
-//
-//
-//
-//                } else {
-//
-//                    Log.e("Utils", "TOKEN DOES NOT EXIST")
-//                    Toast.makeText(context, "TOKEN DOES NOT EXISTS", Toast.LENGTH_SHORT).show()
-//
-//
-//                }
-//
-//
-//
-//
-//                Log.e("Utils", "Device token is ${returntoken}")
-//
-//
-//
-//
-//
-//            }
-//
-//
-//
-//
-//
-//            return returntoken
-//
-//        }
-//
 
 
 
